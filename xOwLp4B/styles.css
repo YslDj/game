@@ -1,0 +1,295 @@
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('https://cdn.jsdelivr.net/npm/geist-font@latest/fonts/geist-mono/GeistMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.font-geist-mono {
+    font-family: 'Geist Mono', monospace;
+}
+
+.app-container {
+    max-width: 480px;
+}
+
+/* Screens */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Forms */
+.form-input {
+    width: 100%;
+    background-color: #111;
+    border: 1px solid #333;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: border-color 0.15s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.2);
+}
+
+.form-input::placeholder {
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #6366f1, #8b5cf6);
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+.btn-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.btn-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Goal Type Buttons */
+.goal-type-btn, .goal-deadline-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    color: white;
+    font-size: 0.875rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.goal-type-btn:hover, .goal-deadline-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.goal-type-btn.active, .goal-deadline-btn.active {
+    background-color: rgba(99, 102, 241, 0.2);
+    border-color: #6366f1;
+}
+
+/* Goal Type Badge */
+.goal-type-badge {
+    background-color: rgba(99, 102, 241, 0.2);
+    color: #a5b4fc;
+    padding: 0.125rem 0.5rem;
+    border-radius: 1rem;
+}
+
+/* Stats box */
+.stats-box {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+}
+
+/* Key Result Items */
+.key-result-item {
+    padding: 0.5rem 0;
+}
+
+/* Reward Input */
+.reward-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #a3a3a3;
+    font-size: 0.875rem;
+    padding: 0;
+}
+
+.reward-input:focus {
+    outline: none;
+    color: white;
+}
+
+.reward-level {
+    display: flex;
+}
+
+/* Tasks */
+.task-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.task-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.task-checkbox {
+    margin-right: 0.75rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+    color: #666;
+}
+
+.task-checkbox svg {
+    transition: all 0.2s ease;
+}
+
+.task-item:hover .task-checkbox svg {
+    color: #6366f1;
+}
+
+.task-content {
+    flex: 1;
+}
+
+.task-title {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.task-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.task-kr {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: #a5b4fc;
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    animation: modalAppear 0.3s ease;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Feeling Buttons */
+.feeling-btn {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.feeling-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.feeling-btn.active {
+    background-color: rgba(99, 102, 241, 0.2);
+    border-color: #6366f1;
+}
